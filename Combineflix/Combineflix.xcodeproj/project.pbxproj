@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DFE0F310F9C223A64C7A8C4 /* Pods_Combineflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB787E30655D42EE90CB461 /* Pods_Combineflix.framework */; };
 		A47E9A6B283FDACA00823CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47E9A6A283FDACA00823CD0 /* AppDelegate.swift */; };
 		A47E9A6D283FDACA00823CD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47E9A6C283FDACA00823CD0 /* SceneDelegate.swift */; };
 		A47E9A6F283FDACA00823CD0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47E9A6E283FDACA00823CD0 /* MainViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16CBE6E30C81B9D58BD52E0B /* Pods-Combineflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combineflix.debug.xcconfig"; path = "Target Support Files/Pods-Combineflix/Pods-Combineflix.debug.xcconfig"; sourceTree = "<group>"; };
+		6838302878F3B5A0A701F75A /* Pods-Combineflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combineflix.release.xcconfig"; path = "Target Support Files/Pods-Combineflix/Pods-Combineflix.release.xcconfig"; sourceTree = "<group>"; };
 		A47E9A67283FDACA00823CD0 /* Combineflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combineflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47E9A6A283FDACA00823CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47E9A6C283FDACA00823CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		A47E9A73283FDACE00823CD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A47E9A76283FDACE00823CD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A47E9A78283FDACE00823CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCB787E30655D42EE90CB461 /* Pods_Combineflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Combineflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFE0F310F9C223A64C7A8C4 /* Pods_Combineflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				A47E9A69283FDACA00823CD0 /* Combineflix */,
 				A47E9A68283FDACA00823CD0 /* Products */,
+				F8AB48BAA3219EDE4BF028DB /* Pods */,
+				BC407D15E357EC8C664D650B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +114,24 @@
 			path = Viewmodels;
 			sourceTree = "<group>";
 		};
+		BC407D15E357EC8C664D650B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCB787E30655D42EE90CB461 /* Pods_Combineflix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8AB48BAA3219EDE4BF028DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16CBE6E30C81B9D58BD52E0B /* Pods-Combineflix.debug.xcconfig */,
+				6838302878F3B5A0A701F75A /* Pods-Combineflix.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A47E9A7B283FDACE00823CD0 /* Build configuration list for PBXNativeTarget "Combineflix" */;
 			buildPhases = (
+				9A1B6452D27957F4CD1AA108 /* [CP] Check Pods Manifest.lock */,
 				A47E9A63283FDACA00823CD0 /* Sources */,
 				A47E9A64283FDACA00823CD0 /* Frameworks */,
 				A47E9A65283FDACA00823CD0 /* Resources */,
+				D22FD05F251B996C68287D71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +199,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A1B6452D27957F4CD1AA108 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Combineflix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D22FD05F251B996C68287D71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Combineflix/Pods-Combineflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Combineflix/Pods-Combineflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Combineflix/Pods-Combineflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A47E9A63283FDACA00823CD0 /* Sources */ = {
@@ -322,6 +391,7 @@
 		};
 		A47E9A7C283FDACE00823CD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16CBE6E30C81B9D58BD52E0B /* Pods-Combineflix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -349,6 +419,7 @@
 		};
 		A47E9A7D283FDACE00823CD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6838302878F3B5A0A701F75A /* Pods-Combineflix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
