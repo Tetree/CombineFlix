@@ -13,7 +13,8 @@ class SectionTableViewCell: UITableViewCell {
     private var viewmodel:SectionViewModel? {
         didSet {
             if let viewmodel = viewmodel {
-                viewmodel.load()
+                viewmodel.fetchMovies(reset: true)
+                setSubscriptions(for: viewmodel)
             }
         }
     }
@@ -30,6 +31,17 @@ class SectionTableViewCell: UITableViewCell {
         }
     }
     
+    private var subscription:AnyCancellable?
+    
+    private func setSubscriptions(for viewmodel: SectionViewModel) {
+        subscription = viewmodel
+            .moviePublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+            self?.collectionView.reloadData()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     
@@ -40,10 +52,13 @@ class SectionTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         viewmodel = nil
+        subscription?.cancel()
+        subscription = nil
     }
     
     func configure(with viewmodel: SectionViewModel) {
         self.viewmodel = viewmodel
+        sectionLabel.text = viewmodel.sectionName
     }
     
 }
@@ -58,6 +73,10 @@ extension SectionTableViewCell : UICollectionViewDelegate, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.cellIdentifier, for: indexPath) as! MovieCollectionViewCell
 
+        if let viewmodel = viewmodel {
+            cell.configure(with: viewmodel.getViewmodel(for: indexPath.item))
+        }
+        
         return cell
     }
     

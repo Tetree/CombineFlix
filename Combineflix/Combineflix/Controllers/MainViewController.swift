@@ -7,12 +7,13 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     private let viewmodel = MainViewModel()
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
+            tableView.delegate = self
             tableView.dataSource = self
             tableView.separatorStyle = .none
             tableView.register(UINib(nibName: "SectionTableViewCell", bundle: nil), forCellReuseIdentifier: SectionTableViewCell.cellIdentifier)
@@ -21,13 +22,13 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
 }
 
-extension MainViewController: UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewmodel.numberOfSections

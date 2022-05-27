@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieCollectionViewCell: UICollectionViewCell {
+final class MovieCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "movieCollectionViewCellIdentifier"
     
@@ -22,6 +22,10 @@ class MovieCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configure(with viewmodel: MovieViewModel) {
+        
     }
 
 }
