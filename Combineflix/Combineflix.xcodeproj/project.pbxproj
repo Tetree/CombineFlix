@@ -10,6 +10,9 @@
 		6DFE0F310F9C223A64C7A8C4 /* Pods_Combineflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB787E30655D42EE90CB461 /* Pods_Combineflix.framework */; };
 		A45852E5284176510039BCE8 /* NetworkServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45852E4284176510039BCE8 /* NetworkServiceable.swift */; };
 		A45852E7284177280039BCE8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45852E6284177280039BCE8 /* NetworkService.swift */; };
+		A45852E928417B220039BCE8 /* SectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45852E828417B220039BCE8 /* SectionViewModel.swift */; };
+		A45852EB28417C460039BCE8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45852EA28417C460039BCE8 /* MainViewModel.swift */; };
+		A45852ED28417DAA0039BCE8 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45852EC28417DAA0039BCE8 /* MovieViewModel.swift */; };
 		A47E9A6B283FDACA00823CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47E9A6A283FDACA00823CD0 /* AppDelegate.swift */; };
 		A47E9A6D283FDACA00823CD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47E9A6C283FDACA00823CD0 /* SceneDelegate.swift */; };
 		A47E9A6F283FDACA00823CD0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47E9A6E283FDACA00823CD0 /* MainViewController.swift */; };
@@ -31,6 +34,9 @@
 		6838302878F3B5A0A701F75A /* Pods-Combineflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combineflix.release.xcconfig"; path = "Target Support Files/Pods-Combineflix/Pods-Combineflix.release.xcconfig"; sourceTree = "<group>"; };
 		A45852E4284176510039BCE8 /* NetworkServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceable.swift; sourceTree = "<group>"; };
 		A45852E6284177280039BCE8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A45852E828417B220039BCE8 /* SectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewModel.swift; sourceTree = "<group>"; };
+		A45852EA28417C460039BCE8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A45852EC28417DAA0039BCE8 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		A47E9A67283FDACA00823CD0 /* Combineflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combineflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47E9A6A283FDACA00823CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47E9A6C283FDACA00823CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 		A47E9A82283FDC5900823CD0 /* Viewmodels */ = {
 			isa = PBXGroup;
 			children = (
+				A45852E828417B220039BCE8 /* SectionViewModel.swift */,
+				A45852EA28417C460039BCE8 /* MainViewModel.swift */,
+				A45852EC28417DAA0039BCE8 /* MovieViewModel.swift */,
 			);
 			path = Viewmodels;
 			sourceTree = "<group>";
@@ -336,8 +345,11 @@
 			files = (
 				A45852E7284177280039BCE8 /* NetworkService.swift in Sources */,
 				A45852E5284176510039BCE8 /* NetworkServiceable.swift in Sources */,
+				A45852E928417B220039BCE8 /* SectionViewModel.swift in Sources */,
 				A47E9A9C283FF05700823CD0 /* Section.swift in Sources */,
 				A47E9A9A283FF05700823CD0 /* Movie.swift in Sources */,
+				A45852ED28417DAA0039BCE8 /* MovieViewModel.swift in Sources */,
+				A45852EB28417C460039BCE8 /* MainViewModel.swift in Sources */,
 				A47E9A6F283FDACA00823CD0 /* MainViewController.swift in Sources */,
 				A47E9A91283FF01300823CD0 /* SectionTableViewCell.swift in Sources */,
 				A47E9A94283FF01300823CD0 /* MovieCollectionViewCell.swift in Sources */,

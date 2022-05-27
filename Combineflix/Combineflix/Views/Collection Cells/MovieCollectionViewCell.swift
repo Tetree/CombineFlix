@@ -11,7 +11,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "movieCollectionViewCellIdentifier"
     
-    @IBOutlet private(set) weak var imageView: UIImageView! {
+    @IBOutlet private weak var imageView: UIImageView! {
         didSet {
             imageView.layer.cornerRadius = 5
             imageView.layer.masksToBounds = true

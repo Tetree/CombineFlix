@@ -10,9 +10,17 @@ import Combine
 
 class SectionTableViewCell: UITableViewCell {
     
+    private var viewmodel:SectionViewModel? {
+        didSet {
+            if let viewmodel = viewmodel {
+                viewmodel.load()
+            }
+        }
+    }
+    
     static let cellIdentifier = "sectionTableViewCellIdentifier"
     
-    @IBOutlet private(set) weak var sectionLabel: UILabel!
+    @IBOutlet private weak var sectionLabel: UILabel!
     
     @IBOutlet private weak var collectionView: UICollectionView! {
         didSet {
@@ -29,12 +37,21 @@ class SectionTableViewCell: UITableViewCell {
         
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        viewmodel = nil
+    }
+    
+    func configure(with viewmodel: SectionViewModel) {
+        self.viewmodel = viewmodel
+    }
+    
 }
 
 extension SectionTableViewCell : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return viewmodel?.numberOfMovies ?? 0
     }
     
     
