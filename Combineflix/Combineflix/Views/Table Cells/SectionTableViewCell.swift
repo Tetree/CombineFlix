@@ -46,11 +46,12 @@ class SectionTableViewCell: UITableViewCell {
         super.awakeFromNib()
     
         selectionStyle = .none
-        
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        viewmodel?.sectionWorkItem?.cancel()
+        viewmodel?.sectionWorkItem = nil
         viewmodel = nil
         subscription?.cancel()
         subscription = nil

@@ -10,6 +10,7 @@ import UIKit
 final class MovieCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "movieCollectionViewCellIdentifier"
+    private var viewmodel: MovieViewModel?
     
     @IBOutlet private weak var imageView: UIImageView! {
         didSet {
@@ -18,14 +19,19 @@ final class MovieCollectionViewCell: UICollectionViewCell {
         }
     }
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with viewmodel: MovieViewModel) {
+        self.viewmodel = viewmodel
+        
+        viewmodel.getImage { [weak self] image in
+            self?.imageView.image = image
+        }
     }
     
-    func configure(with viewmodel: MovieViewModel) {
-        
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        viewmodel?.imageWorkItem?.cancel()
+        viewmodel?.imageWorkItem = nil
+        viewmodel = nil
     }
 
 }

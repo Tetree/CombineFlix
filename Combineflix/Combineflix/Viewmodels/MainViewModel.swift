@@ -19,7 +19,7 @@ struct MainViewModel {
     var numberOfSections:Int { return sections.count }
     
     func viewmodelForSection(at index: Int) -> SectionViewModel {
-        SectionViewModel(section: sections[index], networkService: NetworkService())
+        SectionViewModel(section: sections[index], networkService: NetworkService.shared)
     }
     
     

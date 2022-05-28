@@ -9,6 +9,10 @@ import Foundation
 
 final class NetworkService: NetworkServiceable {
     
+    static let shared = NetworkService()
+
+    private init() {}
+    
     func getSectionDataFor<T>(_ url: URL, with type: T.Type, completionHandler: @escaping (Result<T?, NetworkServiceError>) -> Void) where T : Decodable {
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
